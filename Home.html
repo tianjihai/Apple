@@ -42,7 +42,7 @@
         .ul1{
             list-style: none;float: left;margin: 0;padding: 0;width: 100%;height: 100%;
         }
-        .div1{
+        .div1{z-index: 3;
             position: fixed;top: 0; width: 100%;height: 50px;background-color:#333333;opacity: 0.8;
         }
         .div11{
@@ -51,6 +51,11 @@
         .nav2{
             font-size: 18px;
             width: 100%;color: white;height: 80px;line-height: 80px;border-bottom: 1px solid white;
+        }
+        ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
         }
 
     </style>
@@ -66,7 +71,7 @@
             document.getElementsByName('tp')[0].setAttribute("style","width:800px;");
             document.getElementById('n1').setAttribute("style","text-align: center;font-size: 70px;font-weight: bold;");
             document.getElementsByName('tp')[1].setAttribute("src","img/ipad_large.jpg");
-            document.getElementsByName('tp')[1].setAttribute("style","width:800px;");
+            document.getElementsByName('tp')[1].setAttribute("style","width:1000px;");
             document.getElementById('n2').setAttribute("style","text-align: center;font-size: 70px;font-weight: bold;");
         }else{
             document.getElementById('dhdh2').setAttribute("style","visibility: none;");
@@ -84,8 +89,9 @@
         var windowWidth = document.documentElement.clientWidth;
 
         if(windowWidth >= 700){
+            document.getElementsByClassName('main')[0].setAttribute("style","visibility: none;");
             document.getElementById('dhdh1').setAttribute("style","visibility: none;");
-            document.getElementById('dhdh2').setAttribute("style","visibility: hidden;");
+            document.getElementById('dhdh2').setAttribute("style","display: none;");
             document.getElementsByName('tp')[0].setAttribute("src","img/iphone_x_large.jpg");
             document.getElementsByName('tp')[0].setAttribute("style","width:800px;");
             document.getElementsByName('tp')[1].setAttribute("src","img/ipad_large.jpg");
@@ -109,6 +115,8 @@
         $(document).ready(function(){
             $(".logo2").click(function(){
                 $(".dh2").slideToggle("slow");
+                $(".main").slideToggle("slow");
+                $(".main2").slideToggle("slow");
             });
         });
     </script>
@@ -134,7 +142,7 @@
 </div>
 
 <div id="dhdh2">
-    <div style="position: fixed;top: 0; width: 100%;height: 50px;background-color:black;opacity: 0.7;">
+    <div style="position: fixed;top: 0;z-index: 3; width: 100%;height: 50px;background-color:black;opacity: 0.7;">
         <div style=" margin:0 auto;width: 100%;height: 50px;">
             <nav>
                 <ul style="list-style: none;float: left;margin: 0;padding: 0;width: 100%;height: 100%;">
@@ -144,10 +152,6 @@
             color: white;" >
                         <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
                     </li>
-                    <!--<li style="border: 1px solid blue; height: 50px; float: left;
-            text-align: center;
-            line-height: 50px;
-            color: white;">Mac</li>-->
                     <div style=" text-align: center;height: 50px;padding-top:10px;">
                         <img src="img/logo.png" style="height:30px;"></div>
                 </ul>
@@ -164,13 +168,15 @@
     </div>
 </div>
 
+<div class="main">
     <ul style="list-style: none;margin: 0;padding: 0;width: 100%;">
         <a href="#">
-        <li style="padding-bottom: 50px;border: 1px solid blue;margin-top: 50px;">
-            <div style="background-color: white;margin-top: 80px;">
+        <li style="padding-bottom: 50px;margin-top: 50px;">
+            <div style="background-color: white;margin-top: 120px;">
                 <p ><h1 style="text-align: center;font-size: 70px;font-weight: bold;" id="n1">iPhone X</h1></p>
+                <p ><h1 style="text-align: center;font-size: 30px; " >Say hello to the future.</h1></p>
                 <div style="margin:0 auto;text-align: center;padding-top: 50px;">
-                    <img src="img/iphone_x_large.jpg" style="width: 800px;" name="tp"  >
+                    <img src="img/iphone_x_large.jpg" style="width: 1000px;" name="tp"  >
                 </div>
             </div>
         </li>
@@ -178,7 +184,7 @@
 
 
         <a href="#">
-            <li style="padding-bottom: 50px;border: 1px solid blue;margin-top: 10px;">
+            <li style="padding-bottom: 50px; margin-top: 10px;">
                 <div style="background-color: white;margin-top: 80px;">
                     <p ><h1 style="text-align: center;font-size: 70px;font-weight: bold;" id="n2">iPad</h1></p>
                     <div style="margin:0 auto;text-align: center;padding-top: 50px;">
@@ -187,26 +193,103 @@
                 </div>
             </li>
         </a>
-
-<!--        <li>
-            <div style="border: 1px solid blue;background-color: white;margin-top: 50px;">
-                <p><h1 style="text-align: center;font-size: 70px;font-weight: bold;">iPhone X</h1></p>
-                <div style="margin:0 auto;text-align: center;padding: 100px;">
-                    <img src="img/iphone_x_large.jpg" style="width: 800px;" name="tp"  >
-                </div>
-            </div>
-        </li>
-
-        <li>
-            <div style="border: 1px solid blue;background-color: white;margin-top: 50px;">
-                <p><h1 style="text-align: center;font-size: 70px;font-weight: bold;">iPhone X</h1></p>
-                <div style="margin:0 auto;text-align: center;padding: 100px;">
-                    <img src="img/iphone_x_large.jpg" style="width: 800px;" name="tp"  >
-                </div>
-            </div>
-        </li>-->
     </ul>
+</div>
 
+    <div class="main2" style=" float: left;">
+        <ul style="list-style: none;margin: 0;padding: 10px;">
+            <li style="width: 50%;float: left; ">
+                <div style=" background-color: white; ">
+                    <div style="margin:0 auto;text-align: center;position:relative;padding: 10px;">
+                        <img src="img/macos_medium_2x.jpg" style="width: 100%;"  name="tp"  >
+                        <div>
+                            <p style="text-align: center;font-size:35px;font-weight: bold;position: absolute;top: 30px;z-index: 2;color: white; width: 100%;margin-top: 40px;">
+                                macOS <font style="font-weight: normal">Mojave</font>
+                            </p>
+                            <p style="text-align: center;font-size:20px;position: absolute;top: 90px;z-index: 2;color: white; width: 100%;margin-top: 40px;">因强大而简单</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li style="width: 50%;float: left; ">
+                <div style=" background-color: white;padding: 10px; ">
+                    <div style="margin:0 auto;text-align: center;position:relative;">
+                        <img src="img/ios_medium_2x.jpg" style="width: 100%;"  name="tp"  >
+                        <div>
+                            <p style="text-align: center;font-size:40px;font-weight: bold;position: absolute;top: 15px;z-index: 2;color: black; width: 100%;margin-top: 40px;">iOS 12</p>
+                            <p style="text-align: center;font-size:20px;position: absolute;top: 80px;z-index: 2;color: black; width: 100%;margin-top: 40px;">力量与你同在</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+    </div>
+
+    <footer style="width: 100%; height: 400px;float: left;">
+        <div style=" width: 75%;margin: 0 auto;">
+            <nav>
+                <div style=" width: 20%;float: left;margin-top: 50px;">
+                    <ul>
+                        <li style="height: 30px;font-weight: bold;font-family:'微软雅黑'; ">选购 Apple 产品</li>
+                        <li style="height: 30px;font-family:'微软雅黑'; ">Mac</li>
+                        <li style="height: 30px;font-family:'微软雅黑'; ">iPad</li>
+                        <li style="height: 30px;font-family:'微软雅黑'; ">iPhone</li>
+                        <li style="height: 30px;font-family:'微软雅黑'; ">Watch</li>
+                        <li style="height: 30px;font-family:'微软雅黑'; ">Music</li>
+                        <li style="height: 30px;font-family:'微软雅黑'; ">配件</li>
+                    </ul>
+                </div>
+
+                <div style=" width: 20%;float: left;margin-top: 50px;">
+                    <ul>
+                        <li style="height: 30px;font-weight: bold;font-family:'微软雅黑'; ">Apple Store商店</li>
+                        <li style="height: 30px;font-family:'微软雅黑'; ">附近零售店</li>
+                        <li style="height: 30px;font-family:'微软雅黑'; ">Genius Bar 天才吧</li>
+                        <li style="height: 30px;font-family:'微软雅黑'; ">翻新和优惠</li>
+                        <li style="height: 30px;font-family:'微软雅黑'; ">选购帮助</li>
+                        <li style="height: 30px;font-family:'微软雅黑'; ">分期付款</li>
+                        <li style="height: 30px;font-family:'微软雅黑'; ">Today at Apple</li>
+                    </ul>
+                </div>
+
+                <div style=" width: 20%;float: left;margin-top: 50px;">
+                    <ul>
+                        <li style="height: 30px;font-weight: bold;font-family:'微软雅黑'; ">教育应用</li>
+                        <li style="height: 30px;font-family:'微软雅黑'; ">Apple 教育</li>
+                        <li style="height: 30px;font-family:'微软雅黑'; ">高校师生选购</li>
+                    </ul>
+                </div>
+
+                <div style=" width: 20%;float: left;margin-top: 50px;">
+                    <ul>
+                        <li style="height: 30px;font-weight: bold;font-family:'微软雅黑'; ">Apple 账户</li>
+                        <li style="height: 30px;font-family:'微软雅黑'; ">管理你的 Apple ID</li>
+                        <li style="height: 30px;font-family:'微软雅黑'; ">Apple Store 账户</li>
+                        <li style="height: 30px;font-family:'微软雅黑'; ">iCloud.com</li>
+                    </ul>
+                </div>
+
+                <div style=" width: 20%;float: left;margin-top: 50px;">
+                    <ul>
+                        <li style="height: 30px;font-weight: bold;font-family:'微软雅黑'; ">关于 Apple</li>
+                        <li style="height: 30px;font-family:'微软雅黑'; ">工作机会</li>
+                        <li style="height: 30px;font-family:'微软雅黑'; ">联系Apple</li>
+                    </ul>
+                </div>
+
+            </nav>
+
+
+        </div>
+        <div style=" margin-top: 300px;width: 100%; ">
+            <div style="width: 75%;margin: 0 auto;">
+                <hr />
+                Copyright &copy;  This web site is code by TianJiHai.
+            </div>
+
+        </div>
+    </footer>
 
 </div>
 </body>
