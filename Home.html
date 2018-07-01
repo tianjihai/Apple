@@ -109,6 +109,14 @@
             document.getElementById('n2').setAttribute("style","text-align: center;font-size: 50px;font-weight: bold;");
         }
     }
+window.onscroll=function () {
+    if (document.documentElement.scrollTop + document.body.scrollTop > 100) {
+        document.getElementById("scrollto").style.display = "block";
+    }
+    else {
+        document.getElementById("scrollto").style.display = "none";
+    }
+}
     </script>
 
     <script type="text/javascript">
@@ -123,9 +131,10 @@
 
 </head>
 <body>
+
 <div>
 <div class="div1" id="dhdh1">
-    <div class="div11">
+    <div class="div11" >
         <nav>
             <ul class="ul1">
                 <li class="nav1" id="logo">
@@ -292,5 +301,7 @@
     </footer>
 
 </div>
+
+<a href="#logo" style="position:fixed;right:0;bottom:0" id="scrollto" >回到顶部</a>
 </body>
 </html>
