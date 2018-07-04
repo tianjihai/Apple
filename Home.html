@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" charset="utf-8">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
     <title>Bootstrap 101 Template</title>
 
@@ -49,7 +47,8 @@
              margin:0 auto;width: 80%;height: 50px;
         }
         .nav2{
-            font-size: 18px;
+            padding-left: 40px;
+            font-size: 20px;
             width: 100%;color: white;height: 80px;line-height: 80px;border-bottom: 1px solid white;
         }
         ul{
@@ -57,6 +56,13 @@
             margin: 0;
             padding: 0;
         }
+        .li1{
+            width: 50%;float: left;
+        }
+        .li11{
+            width: 100%;
+        }
+
 
     </style>
 
@@ -72,16 +78,24 @@
             document.getElementById('n1').setAttribute("style","text-align: center;font-size: 70px;font-weight: bold;");
             document.getElementsByName('tp')[1].setAttribute("src","img/ipad_large.jpg");
             document.getElementsByName('tp')[1].setAttribute("style","width:1000px;");
+            document.getElementsByName('tp')[2].setAttribute("src","img/macos_medium_2x.jpg");
+            document.getElementsByName('tp')[3].setAttribute("src","img/ios_medium_2x.jpg");
             document.getElementById('n2').setAttribute("style","text-align: center;font-size: 70px;font-weight: bold;");
+            document.getElementsByClassName('li11')[0].setAttribute("class","li1");
+            document.getElementsByClassName('li11')[1].setAttribute("class","li1");
         }else{
             document.getElementById('dhdh2').setAttribute("style","visibility: none;");
             document.getElementById('dhdh1').setAttribute("style","visibility: hidden;");
             document.getElementsByName('tp')[0].setAttribute("src","img/iphone_x_small_2x.jpg");
-            document.getElementsByName('tp')[0].setAttribute("style","width:200px;");
+            document.getElementsByName('tp')[0].setAttribute("style","width:100%;");
             document.getElementById('n1').setAttribute("style","text-align: center;font-size: 50px;font-weight: bold;");
             document.getElementsByName('tp')[1].setAttribute("src","img/ipad_small.jpg");
-            document.getElementsByName('tp')[1].setAttribute("style","width:500px;");
+            document.getElementsByName('tp')[1].setAttribute("style","width:100%;");
+            document.getElementsByName('tp')[2].setAttribute("src","img/macos_small_2x.jpg");
+            document.getElementsByName('tp')[3].setAttribute("src","img/ios_small_2x.jpg");
             document.getElementById('n2').setAttribute("style","text-align: center;font-size: 50px;font-weight: bold;");
+            document.getElementsByClassName('li1')[0].setAttribute("class","li11");
+            document.getElementsByClassName('li1')[1].setAttribute("class","li11");
         }
     };
     window.onresize=function setCSS(){
@@ -89,6 +103,7 @@
         var windowWidth = document.documentElement.clientWidth;
 
         if(windowWidth >= 700){
+
             document.getElementsByClassName('main')[0].setAttribute("style","visibility: none;");
             document.getElementById('dhdh1').setAttribute("style","visibility: none;");
             document.getElementById('dhdh2').setAttribute("style","display: none;");
@@ -96,17 +111,25 @@
             document.getElementsByName('tp')[0].setAttribute("style","width:800px;");
             document.getElementsByName('tp')[1].setAttribute("src","img/ipad_large.jpg");
             document.getElementsByName('tp')[1].setAttribute("style","width:800px;");
+            document.getElementsByName('tp')[2].setAttribute("src","img/macos_medium_2x.jpg");
+            document.getElementsByName('tp')[3].setAttribute("src","img/ios_medium_2x.jpg");
             document.getElementById('n1').setAttribute("style","text-align: center;font-size: 70px;font-weight: bold;");
             document.getElementById('n2').setAttribute("style","text-align: center;font-size: 70px;font-weight: bold;");
+            document.getElementsByClassName('li11')[0].setAttribute("class","li1");
+            document.getElementsByClassName('li11')[1].setAttribute("class","li1");
         }else{
             document.getElementById('dhdh2').setAttribute("style","visibility: none;");
             document.getElementById('dhdh1').setAttribute("style","visibility: hidden;");
             document.getElementsByName('tp')[0].setAttribute("src","img/iphone_x_small_2x.jpg");
-            document.getElementsByName('tp')[0].setAttribute("style","width:200px;");
+            document.getElementsByName('tp')[0].setAttribute("style","width:100%;");
             document.getElementsByName('tp')[1].setAttribute("src","img/ipad_small.jpg");
-            document.getElementsByName('tp')[1].setAttribute("style","width:500px;");
+            document.getElementsByName('tp')[1].setAttribute("style","width:100%;");
+            document.getElementsByName('tp')[2].setAttribute("src","img/macos_small_2x.jpg");
+            document.getElementsByName('tp')[3].setAttribute("src","img/ios_small_2x.jpg");
             document.getElementById('n1').setAttribute("style","text-align: center;font-size: 50px;font-weight: bold;");
             document.getElementById('n2').setAttribute("style","text-align: center;font-size: 50px;font-weight: bold;");
+            document.getElementsByClassName('li1')[0].setAttribute("class","li11");
+            document.getElementsByClassName('li1')[1].setAttribute("class","li11");
         }
     }
 window.onscroll=function () {
@@ -181,10 +204,10 @@ window.onscroll=function () {
     <ul style="list-style: none;margin: 0;padding: 0;width: 100%;">
         <a href="#">
         <li style="padding-bottom: 50px;margin-top: 50px;">
-            <div style="background-color: white;margin-top: 120px;">
+            <div style="background-color: white;margin-top: 110px;">
                 <p ><h1 style="text-align: center;font-size: 70px;font-weight: bold;" id="n1">iPhone X</h1></p>
                 <p ><h1 style="text-align: center;font-size: 30px; " >Say hello to the future.</h1></p>
-                <div style="margin:0 auto;text-align: center;padding-top: 50px;">
+                <div style="margin:0 auto;text-align: center; padding-left: 80px;padding-right: 80px;padding-top: 40px;">
                     <img src="img/iphone_x_large.jpg" style="width: 1000px;" name="tp"  >
                 </div>
             </div>
@@ -196,6 +219,7 @@ window.onscroll=function () {
             <li style="padding-bottom: 50px; margin-top: 10px;">
                 <div style="background-color: white;margin-top: 80px;">
                     <p ><h1 style="text-align: center;font-size: 70px;font-weight: bold;" id="n2">iPad</h1></p>
+                    <p ><h1 style="text-align: center;font-size: 30px; " >Like a computer. Unlike any computer.</h1></p>
                     <div style="margin:0 auto;text-align: center;padding-top: 50px;">
                         <img src="img/ipad_large.jpg" style="width: 800px;" name="tp"  >
                     </div>
@@ -207,7 +231,7 @@ window.onscroll=function () {
 
     <div class="main2" style=" float: left;">
         <ul style="list-style: none;margin: 0;padding: 10px;">
-            <li style="width: 50%;float: left; ">
+            <li class="li1">
                 <div style=" background-color: white; ">
                     <div style="margin:0 auto;text-align: center;position:relative;padding: 10px;">
                         <img src="img/macos_medium_2x.jpg" style="width: 100%;"  name="tp"  >
@@ -220,7 +244,7 @@ window.onscroll=function () {
                     </div>
                 </div>
             </li>
-            <li style="width: 50%;float: left; ">
+            <li class="li1">
                 <div style=" background-color: white;padding: 10px; ">
                     <div style="margin:0 auto;text-align: center;position:relative;">
                         <img src="img/ios_medium_2x.jpg" style="width: 100%;"  name="tp"  >

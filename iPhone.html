@@ -3,9 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <title>iPhone</title>
+    <script src="js/jquery-3.3.1.min.js" type="text/javascript">
+    </script>
+
+
+    <script type="text/javascript">
+        $(window).ready(function () {
+            getapp();
+        });
+
+        function getapp() {
+            var u="appitems.json";
+            $.ajax({
+                    url:u,
+                    type:"get",
+                    async:false,
+                    success:function (e) {
+                        if(e.code==200){
+                            alert("fail");
+                        }else{
+                            $.each(e,function (i,o) {
+                                var appitems=o.ITEMDESC;
+                                alert(appitems);
+                                document.getElementById('js').innerHTML=appitems;
+                            })
+                        }
+                    }
+                }
+            )
+        }
+
+</script>
+
+
 </head>
 <body>
 <div id="top">iPhoneX</div>
+<label id="js"></label>
 
 <br/>
 <br/><br/>
