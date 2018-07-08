@@ -8,37 +8,49 @@
 
 
     <script type="text/javascript">
-        $(window).ready(function () {
-            getapp();
-        });
 
-        function getapp() {
-            var u="appitems.json";
-            $.ajax({
-                    url:u,
-                    type:"get",
-                    async:false,
-                    success:function (e) {
-                        if(e.code==200){
-                            alert("fail");
-                        }else{
-                            $.each(e,function (i,o) {
-                                var appitems=o.ITEMDESC;
-                                alert(appitems);
-                                document.getElementById('js').innerHTML=appitems;
-                            })
+        $(document).ready(function() {
+
+            //setInterval(getapp,500);
+
+            $("div").mouseover(function () {
+                getapp();
+            });
+
+            function getapp() {
+                var u = "appitems.json";
+                $.ajax({
+                        url: u,
+                        type: "get",
+                        async: false,
+                        success: function (e) {
+                            if (e.code == 200) {
+                                alert("fail");
+                            } else {
+                                $.each(e, function (i, o) {
+                                    var appitems = o.ITEMDESC;
+                                    var app2 = o.EVALSTAND;
+                                    //alert(appitems);
+                                    //document.getElementById('js').innerHTML=appitems;
+                                    $("#js").append(
+                                        "<h5 class='list-group-item-heading'>"
+                                        + appitems
+                                        + "</h5> <p class='list-group-item-text'>"
+                                        + app2
+                                        + "</p>");
+                                })
+                            }
                         }
                     }
-                }
-            )
-        }
-
+                )
+            }
+        });
 </script>
 
 
 </head>
 <body>
-<div id="top">iPhoneX</div>
+<div id="top" style="border:1px solid red;">iPhoneX</div>
 <label id="js"></label>
 
 <br/>
