@@ -149,7 +149,30 @@ window.onscroll=function () {
                 $(".main").slideToggle("slow");
                 $(".main2").slideToggle("slow");
             });
+
+
+
+            $(window).scroll(function(){
+                if ($(window).scrollTop()>100){
+                    $("#goTop").fadeIn(500);
+                }
+                else
+                {
+                    $("#goTop").fadeOut(500);
+                }
+            });
+
+
+            $("#goTop").click(function(){
+                $('body,html').animate({scrollTop:0},1000);
+            });
+
+
+
+
         });
+
+
     </script>
 
 </head>
@@ -326,6 +349,8 @@ window.onscroll=function () {
 
 </div>
 
-<a href="#dhdh2" style="position:fixed;right:0;bottom:0" id="scrollto" >回到顶部</a>
+<div id="goTop" class="gotop" style="display: none;position: fixed;bottom: 10px;right: 10px;overflow: hidden;width: 100px;height:30px;text-align: center;background-color: lightblue;line-height: 30px;">
+    <p>回顶部</p>
+</div>
 </body>
 </html>
