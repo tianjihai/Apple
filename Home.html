@@ -58,12 +58,14 @@
             padding: 0;
         }
         .li1{
-            height: 300px;
             border: 1px solid red;
+            background: url(img/macos_medium_2x.jpg) center center no-repeat  ;
+            height: 800px;
         }
         .li2{ 
-            height: 300px;
             border: 1px solid blue;
+            background: url(img/ios_medium_2x.jpg) center center no-repeat  ;
+            height: 800px;
         }
         .main2{
             width: 100%;
@@ -105,9 +107,7 @@
         }
     };
     window.onresize=function setCSS(){
-
         var windowWidth = document.documentElement.clientWidth;
-
         if(windowWidth >= 768){
 
             document.getElementsByClassName('main')[0].setAttribute("style","visibility: none;");
@@ -248,10 +248,10 @@ window.onscroll=function () {
 </div>
 
     <div class="row main2" >
-                <div class="col-sm-6 li1" id="left1" style=" background: url(img/macos_medium_2x.jpg) center center no-repeat  ; height: 800px;">
+                <div class="col-sm-6 li1" id="left1" >
 
                 </div>
-                <div class="col-sm-6 li2" id="left2" style=" background: url(img/ios_medium_2x.jpg) center center no-repeat  ; height: 800px;">
+                <div class="col-sm-6 li2" id="left2" >
 
                 </div>
 
