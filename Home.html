@@ -7,19 +7,13 @@
 
     <!-- Bootstrap -->
  <link href="css/bootstrap.min.css" rel="stylesheet" >
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
-    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
-    <!--[if lt IE 9]>
-     <script>
-         alert("IE8不支持");
-         document.getElementsByClassName('body1').setAttribute("display","img/iphone_x_large.jpg");
-     </script>
 
-    <![endif]-->
     <style>
-        .body1{
-            display: block;
+        .mainBody{
+             display: block;
+         }
+        .mainBody2{
+            display: none;
         }
         @media only screen and (min-width: 500px) and (max-width: 767px) {
 
@@ -89,98 +83,12 @@
 
     </style>
 
-    <script type="text/javascript">
-    //用js写响应式
-    window.onload=function size(){
-        var windowWidth = document.documentElement.clientWidth;
-        if(windowWidth >= 768){
-            document.getElementsByName('tp')[0].setAttribute("src","img/iphone_x_large.jpg");
-            document.getElementsByName('tp')[0].setAttribute("style","width:800px;");
-            document.getElementById('n1').setAttribute("style","text-align: center;font-size: 70px;font-weight: bold;");
-            document.getElementsByName('tp')[1].setAttribute("src","img/ipad_large.jpg");
-            document.getElementsByName('tp')[1].setAttribute("style","width:1000px;");
-            document.getElementById('n2').setAttribute("style","text-align: center;font-size: 70px;font-weight: bold;");
-
-        }else{
-            document.getElementsByName('tp')[0].setAttribute("src","img/iphone_x_small_2x.jpg");
-            document.getElementsByName('tp')[0].setAttribute("style","width:100%;");
-            document.getElementById('n1').setAttribute("style","text-align: center;font-size: 50px;font-weight: bold;");
-            document.getElementsByName('tp')[1].setAttribute("src","img/ipad_small.jpg");
-            document.getElementsByName('tp')[1].setAttribute("style","width:100%;");
-            document.getElementsByName('tp')[2].setAttribute("src","img/macos_small_2x.jpg");
-            document.getElementsByName('tp')[3].setAttribute("src","img/ios_small_2x.jpg");
-            document.getElementById('n2').setAttribute("style","text-align: center;font-size: 50px;font-weight: bold;");
-
-        }
-    };
-    window.onresize=function setCSS(){
-        var windowWidth = document.documentElement.clientWidth;
-        if(windowWidth >= 768){
-
-            document.getElementsByClassName('main')[0].setAttribute("style","visibility: none;");
-            document.getElementsByName('tp')[0].setAttribute("src","img/iphone_x_large.jpg");
-            document.getElementsByName('tp')[0].setAttribute("style","width:800px;");
-            document.getElementsByName('tp')[1].setAttribute("src","img/ipad_large.jpg");
-            document.getElementsByName('tp')[1].setAttribute("style","width:800px;");
-            document.getElementById('n1').setAttribute("style","text-align: center;font-size: 70px;font-weight: bold;");
-            document.getElementById('n2').setAttribute("style","text-align: center;font-size: 70px;font-weight: bold;");
-
-        }else{
-            document.getElementsByName('tp')[0].setAttribute("src","img/iphone_x_small_2x.jpg");
-            document.getElementsByName('tp')[0].setAttribute("style","width:100%;");
-            document.getElementsByName('tp')[1].setAttribute("src","img/ipad_small.jpg");
-            document.getElementsByName('tp')[1].setAttribute("style","width:100%;");
-            document.getElementById('n1').setAttribute("style","text-align: center;font-size: 50px;font-weight: bold;");
-            document.getElementById('n2').setAttribute("style","text-align: center;font-size: 50px;font-weight: bold;");
-
-        }
-    }
-window.onscroll=function () {
-    if (document.documentElement.scrollTop + document.body.scrollTop > 100) {
-        document.getElementById("scrollto").style.display = "block";
-    }
-    else {
-        document.getElementById("scrollto").style.display = "none";
-    }
-}
-    </script>
-
-    <script type="text/javascript">
-        $(document).ready(function(){
-            $(".logo2").click(function(){
-                $(".dh2").slideToggle("slow");
-                $(".main").slideToggle("slow");
-                $(".main2").slideToggle("slow");
-            });
 
 
-
-            $(window).scroll(function(){
-                if ($(window).scrollTop()>100){
-                    $("#goTop").fadeIn(500);
-                }
-                else
-                {
-                    $("#goTop").fadeOut(500);
-                }
-            });
-
-
-            $("#goTop").click(function(){
-                $('body,html').animate({scrollTop:0},1000);
-            });
-
-
-
-
-        });
-
-
-    </script>
 
 </head>
-<body class="body1">
-<div>
+<body >
+<div class="mainBody" id="mainBody">
 <div class="div1 visible-sm visible-md visible-lg" id="dhdh1">
     <div class="div11" >
         <nav>
@@ -331,9 +239,118 @@ window.onscroll=function () {
 
 </div>
 
+
+<div class="mainBody2" id="mainBody2">
+    您的浏览器版本过低，为了更好的体验请升级浏览器
+</div>
+
 <div id="goTop" class="gotop" style="display: none;position: fixed;bottom: 10px;right: 10px;overflow: hidden;width: 100px;height:30px;text-align: center;background-color: lightblue;line-height: 30px;">
     <p>回到顶部</p>
 </div>
+
+
+
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+<!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+<!--[if lt IE 9]>
+<script type="text/javascript">
+        alert("IE8不支持");
+        document.getElementById('mainBody').setAttribute("style","display: none");
+        document.getElementById('mainBody2').setAttribute("style","display: block");
+</script>
+
+<![endif]-->
+<script type="text/javascript">
+    //用js写响应式
+    window.onload=function size(){
+        var windowWidth = document.documentElement.clientWidth;
+        if(windowWidth >= 768){
+
+            document.getElementsByName('tp')[0].setAttribute("src","img/iphone_x_large.jpg");
+            document.getElementsByName('tp')[0].setAttribute("style","width:800px;");
+            document.getElementById('n1').setAttribute("style","text-align: center;font-size: 70px;font-weight: bold;");
+            document.getElementsByName('tp')[1].setAttribute("src","img/ipad_large.jpg");
+            document.getElementsByName('tp')[1].setAttribute("style","width:1000px;");
+            document.getElementById('n2').setAttribute("style","text-align: center;font-size: 70px;font-weight: bold;");
+
+        }else{
+            document.getElementsByName('tp')[0].setAttribute("src","img/iphone_x_small_2x.jpg");
+            document.getElementsByName('tp')[0].setAttribute("style","width:100%;");
+            document.getElementById('n1').setAttribute("style","text-align: center;font-size: 50px;font-weight: bold;");
+            document.getElementsByName('tp')[1].setAttribute("src","img/ipad_small.jpg");
+            document.getElementsByName('tp')[1].setAttribute("style","width:100%;");
+            document.getElementsByName('tp')[2].setAttribute("src","img/macos_small_2x.jpg");
+            document.getElementsByName('tp')[3].setAttribute("src","img/ios_small_2x.jpg");
+            document.getElementById('n2').setAttribute("style","text-align: center;font-size: 50px;font-weight: bold;");
+
+        }
+    };
+    window.onresize=function setCSS(){
+        var windowWidth = document.documentElement.clientWidth;
+        if(windowWidth >= 768){
+
+            document.getElementsByClassName('main')[0].setAttribute("style","visibility: none;");
+            document.getElementsByName('tp')[0].setAttribute("src","img/iphone_x_large.jpg");
+            document.getElementsByName('tp')[0].setAttribute("style","width:800px;");
+            document.getElementsByName('tp')[1].setAttribute("src","img/ipad_large.jpg");
+            document.getElementsByName('tp')[1].setAttribute("style","width:800px;");
+            document.getElementById('n1').setAttribute("style","text-align: center;font-size: 70px;font-weight: bold;");
+            document.getElementById('n2').setAttribute("style","text-align: center;font-size: 70px;font-weight: bold;");
+
+        }else{
+            document.getElementsByName('tp')[0].setAttribute("src","img/iphone_x_small_2x.jpg");
+            document.getElementsByName('tp')[0].setAttribute("style","width:100%;");
+            document.getElementsByName('tp')[1].setAttribute("src","img/ipad_small.jpg");
+            document.getElementsByName('tp')[1].setAttribute("style","width:100%;");
+            document.getElementById('n1').setAttribute("style","text-align: center;font-size: 50px;font-weight: bold;");
+            document.getElementById('n2').setAttribute("style","text-align: center;font-size: 50px;font-weight: bold;");
+
+        }
+    }
+    window.onscroll=function () {
+        if (document.documentElement.scrollTop + document.body.scrollTop > 100) {
+            document.getElementById("scrollto").style.display = "block";
+        }
+        else {
+            document.getElementById("scrollto").style.display = "none";
+        }
+    }
+</script>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(".logo2").click(function(){
+            $(".dh2").slideToggle("slow");
+            $(".main").slideToggle("slow");
+            $(".main2").slideToggle("slow");
+        });
+
+
+
+        $(window).scroll(function(){
+            if ($(window).scrollTop()>100){
+                $("#goTop").fadeIn(500);
+            }
+            else
+            {
+                $("#goTop").fadeOut(500);
+            }
+        });
+
+
+        $("#goTop").click(function(){
+            $('body,html').animate({scrollTop:0},1000);
+        });
+
+
+
+
+    });
+
+</script>
+
 
 </body>
 </html>
