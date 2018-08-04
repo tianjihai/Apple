@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d21c87c7-f7c1-4448-b55c-ff9f558354ce" name="Default" comment="样式整理">
+    <list default="true" id="d21c87c7-f7c1-4448-b55c-ff9f558354ce" name="Default" comment="字体，行高设置">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Home.html" beforeDir="false" afterPath="$PROJECT_DIR$/Home.html" afterDir="false" />
     </list>
@@ -18,27 +18,27 @@
     <session id="-125005953">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="6" />
-          <entry key="project.open.time.10" value="1" />
+          <entry key="project.closed" value="7" />
+          <entry key="project.open.time.10" value="2" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.33" value="1" />
           <entry key="project.open.time.36" value="1" />
           <entry key="project.open.time.37" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="7" />
+          <entry key="project.opened" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="550" />
-          <entry key="txt" value="51" />
+          <entry key="html" value="694" />
+          <entry key="txt" value="60" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="550" />
-          <entry key="PLAIN_TEXT" value="51" />
+          <entry key="HTML" value="694" />
+          <entry key="PLAIN_TEXT" value="60" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -59,8 +59,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="121">
-              <caret line="29" column="27" selection-start-line="29" selection-start-column="27" selection-end-line="29" selection-end-column="27" />
+            <state relative-caret-position="300">
+              <caret line="15" column="78" lean-forward="true" selection-start-line="15" selection-start-column="78" selection-end-line="15" selection-end-column="78" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#li#0;n#ul#0;n#nav#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -275,7 +275,8 @@
       <workItem from="1533302511255" duration="1285000" />
       <workItem from="1533307997349" duration="3102000" />
       <workItem from="1533392376673" duration="600000" />
-      <workItem from="1533395320037" duration="836000" />
+      <workItem from="1533395320037" duration="1038000" />
+      <workItem from="1533397762143" duration="599000" />
     </task>
     <task id="LOCAL-00001" summary="修改主页并添加footer">
       <created>1530370608998</created>
@@ -375,11 +376,18 @@
       <option name="project" value="LOCAL" />
       <updated>1533311505198</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="字体，行高设置">
+      <created>1533397105266</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1533397105266</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44332000" />
+    <option name="totallyTimeSpent" value="45133000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -398,7 +406,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.3289256" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="10" weight="0.46469623" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="10" visible="true" weight="0.08866995" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -470,7 +478,8 @@
     <MESSAGE value="底部footer自适应" />
     <MESSAGE value="列表图片自适应屏幕" />
     <MESSAGE value="样式整理" />
-    <option name="LAST_COMMIT_MESSAGE" value="样式整理" />
+    <MESSAGE value="字体，行高设置" />
+    <option name="LAST_COMMIT_MESSAGE" value="字体，行高设置" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/css/bootstrap.css">
@@ -488,8 +497,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="29" column="27" selection-start-line="29" selection-start-column="27" selection-end-line="29" selection-end-column="27" />
+        <state relative-caret-position="300">
+          <caret line="15" column="78" lean-forward="true" selection-start-line="15" selection-start-column="78" selection-end-line="15" selection-end-column="78" />
           <folding>
             <element signature="n#style#0;n#img#0;n#li#0;n#ul#0;n#nav#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />

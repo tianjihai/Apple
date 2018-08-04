@@ -11,9 +11,16 @@
     <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
     <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
     <!--[if lt IE 9]>
+     <script>
+         alert("IE8不支持");
+         document.getElementsByClassName('body1').setAttribute("display","img/iphone_x_large.jpg");
+     </script>
 
     <![endif]-->
     <style>
+        .body1{
+            display: block;
+        }
         @media only screen and (min-width: 500px) and (max-width: 767px) {
 
             /*分辨率在320~767px内的样式*/
@@ -172,7 +179,7 @@ window.onscroll=function () {
     </script>
 
 </head>
-<body>
+<body class="body1">
 <div>
 <div class="div1 visible-sm visible-md visible-lg" id="dhdh1">
     <div class="div11" >
